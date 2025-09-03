@@ -25,7 +25,8 @@ function sortearAmigo(){
     let resultado = document.getElementById("resultado") //Selecciona el elemento con el Id "resultado"
     let nombre_sorteado = nombres[getRandomInt(nombres.length)] //Se genera un numero aleatorio utilizable dentro de nuestros parametros
 
-    resultado.innerHTML = nombre_sorteado //Se modifica el contenido inicial de resultado
+    document.querySelector("ul").remove() // Borra el contenido de la etiqueta "ul"
+    resultado.innerHTML = "El amigo sorteado es: "+ nombre_sorteado //Se modifica el contenido inicial de resultado
 }
 
 function getRandomInt(max) { //Obtiene un numero aleatorio entre 0 y la longitud del array nombres
